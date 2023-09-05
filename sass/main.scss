@@ -1,0 +1,171 @@
+$color-primary-purple: hsl(259, 100%, 65%);
+$color-primary-light-red: hsl(0, 100%, 67%);
+
+$color-neutral-white: hsl(0, 0%, 100%);
+$color-neutral-off-white: hsl(0, 0%, 94%);
+$color-neutral-light-grey: hsl(0, 0%, 86%);
+$color-neutral-smokey-grey: hsl(0, 1%, 44%);
+$color-neutral-off-black: hsl(0, 0%, 8%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  background-color: $color-neutral-off-white;
+  .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $color-neutral-white;
+    padding: 3rem;
+    width: 700px;
+    border-radius: 1.2rem 1.2rem 8rem;
+  }
+}
+
+.inputs {
+  font-weight: 700;
+  border-bottom: 1px solid $color-neutral-light-grey;
+  padding-bottom: 2.4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  .input {
+    display: inline-block;
+    margin-right: 1.4rem;
+    .message {
+      font-size: 0.8rem;
+      font-style: italic;
+      font-weight: 100;
+      color: $color-primary-light-red;
+      display: block;
+    }
+
+    label {
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      letter-spacing: 0.2rem;
+      color: $color-neutral-smokey-grey;
+      display: block;
+    }
+
+    input {
+      padding: 0.8rem 1.2rem;
+      width: 140px;
+      height: 60px;
+      border: 1px solid $color-neutral-light-grey;
+      border-radius: 7px;
+      font-weight: inherit;
+      font-size: 32px;
+      &:focus {
+        outline: 1px solid $color-primary-purple;
+        padding-right: 1rem;
+        caret-color: $color-primary-purple;
+      }
+    }
+  }
+}
+
+.age-results {
+  font-size: 3.6rem;
+  color: $color-neutral-off-black;
+  margin-top: 1.2rem;
+  margin-bottom: 2rem;
+  .age-result {
+    height: 4.8rem;
+    .results {
+      i {
+        font-weight: 800;
+        font-size: 5rem;
+        .result {
+          color: $color-primary-purple;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  float: right;
+  transform: translateY(-50%);
+
+  background-color: $color-primary-purple;
+  border: none;
+  border-radius: 100px;
+
+  height: 4.8rem;
+  width: 4.8rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  &:active {
+    background-color: $color-neutral-off-black;
+  }
+  .arrow {
+    width: 2.4rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    width: 100vw;
+    .box {
+      width: 80vw;
+      padding: 2rem 1.5rem;
+      border-radius: 1.2rem 1.2rem 5rem;
+    }
+  }
+
+  .age-results {
+    .age-result {
+      height: 2.5rem;
+      .results {
+        i {
+          font-size: 2.4rem;
+        }
+      }
+    }
+  }
+
+  .btn {
+    height: 50px;
+    width: 50px;
+    transform: translateX(-200%) translateY(-50%);
+    .arrow {
+      width: 1.5rem;
+    }
+  }
+
+  .inputs {
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    .message {
+      font-size: 0.4rem;
+      font-style: italic;
+    }
+    .input {
+      margin-right: 1rem;
+      text-align: start;
+      padding-bottom: 2rem;
+      input {
+        padding: 0.6rem 0.8rem;
+        width: 4.5rem;
+        font-size: 1rem;
+        height: 42px;
+      }
+    }
+  }
+}

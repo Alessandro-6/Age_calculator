@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  background-color: hsl(0, 0%, 94%);
+}
+.container .box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: hsl(0, 0%, 100%);
+  padding: 3rem;
+  width: 700px;
+  border-radius: 1.2rem 1.2rem 8rem;
+}
+
+.inputs {
+  font-weight: 700;
+  border-bottom: 1px solid hsl(0, 0%, 86%);
+  padding-bottom: 2.4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.inputs .input {
+  display: inline-block;
+  margin-right: 1.4rem;
+}
+.inputs .input .message {
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 100;
+  color: hsl(0, 100%, 67%);
+  display: block;
+}
+.inputs .input label {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.2rem;
+  color: hsl(0, 1%, 44%);
+  display: block;
+}
+.inputs .input input {
+  padding: 0.8rem 1.2rem;
+  width: 140px;
+  height: 60px;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 7px;
+  font-weight: inherit;
+  font-size: 32px;
+}
+.inputs .input input:focus {
+  outline: 1px solid hsl(259, 100%, 65%);
+  padding-right: 1rem;
+  caret-color: hsl(259, 100%, 65%);
+}
+
+.age-results {
+  font-size: 3.6rem;
+  color: hsl(0, 0%, 8%);
+  margin-top: 1.2rem;
+  margin-bottom: 2rem;
+}
+.age-results .age-result {
+  height: 4.8rem;
+}
+.age-results .age-result .results i {
+  font-weight: 800;
+  font-size: 5rem;
+}
+.age-results .age-result .results i .result {
+  color: hsl(259, 100%, 65%);
+}
+
+.btn {
+  float: right;
+  transform: translateY(-50%);
+  background-color: hsl(259, 100%, 65%);
+  border: none;
+  border-radius: 100px;
+  height: 4.8rem;
+  width: 4.8rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.btn:active {
+  background-color: hsl(0, 0%, 8%);
+}
+.btn .arrow {
+  width: 2.4rem;
+}
+
+@media (max-width: 375px) {
+  .container {
+    width: 100vw;
+  }
+  .container .box {
+    width: 80vw;
+    padding: 2rem 1.5rem;
+    border-radius: 1.2rem 1.2rem 5rem;
+  }
+  .age-results .age-result {
+    height: 2.5rem;
+  }
+  .age-results .age-result .results i {
+    font-size: 2.4rem;
+  }
+  .btn {
+    height: 50px;
+    width: 50px;
+    transform: translateX(-200%) translateY(-50%);
+  }
+  .btn .arrow {
+    width: 1.5rem;
+  }
+  .inputs {
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .inputs .message {
+    font-size: 0.4rem;
+    font-style: italic;
+  }
+  .inputs .input {
+    margin-right: 1rem;
+    text-align: start;
+    padding-bottom: 2rem;
+  }
+  .inputs .input input {
+    padding: 0.6rem 0.8rem;
+    width: 4.5rem;
+    font-size: 1rem;
+    height: 42px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Frontend Mentor | Age calculator app</title>
+    <script defer src="js/script.js"></script>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <section class="container">
+      <div class="box">
+        <div class="inputs">
+          <div class="input">
+            <label for="day">Day</label>
+            <input name="day" id="day" placeholder="DD" />
+            <span class="message days"></span>
+          </div>
+
+          <div class="input">
+            <label for="month">Month</label>
+            <input name="month" id="month" placeholder="MM" />
+            <span class="message"></span>
+          </div>
+
+          <div class="input">
+            <label for="year">Year</label>
+            <input name="year" id="year" placeholder="YYYY" />
+            <span class="message"></span>
+          </div>
+        </div>
+
+        <button class="btn" type="submit">
+          <img
+            src="assets/images/icon-arrow.svg"
+            alt="An arrow downwards"
+            class="arrow"
+          />
+        </button>
+        <!-- Age Results-->
+        <div class="age-results">
+          <div class="age-result">
+            <span class="results">
+              <i><span class="result year">- -</span>years</i>
+            </span>
+          </div>
+          <div class="age-result">
+            <span class="results">
+              <i><span class="result month">- -</span>months</i>
+            </span>
+          </div>
+          <div class="age-result">
+            <span class="results">
+              <i><span class="result day">- -</span>days</i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Alexen267-design</a>.
+    </div>
+  </body>
+</html>
